@@ -44,7 +44,7 @@ These Terms outline baseline rules for all features of the App. By installing an
    - **License key unreceived / unactivated**: Full refund within **14 days** of payment.
    - **After activation**: Refund possible within **7 days of payment**, provided **under 10% of the total period has been used**.
    - **After substantial use**: Refunds generally not available.
-3. Refund requests: `leeyosep.lee@gmail.com`.
+3. Refund requests: `cozy_uploader@naver.com`.
 
 ## 7. User Obligations
 
@@ -105,4 +105,4 @@ Any violation may result in **immediate License termination without refund**.
 
 **These Terms are effective as of 2026-04-15.**
 
-Contact: **leeyosep.lee@gmail.com**
+Contact: **cozy_uploader@naver.com**

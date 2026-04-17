@@ -10,7 +10,7 @@ Cozy Uploader ("the App") values user privacy and complies with applicable data-
 
 - Service Name: **Cozy Uploader**
 - Data Protection Officer: Yoseph Lee
-- Contact: **leeyosep.lee@gmail.com**
+- Contact: **cozy_uploader@naver.com**
 - Official Website: https://cozy-uploader.github.io
 
 ## 2. Data We Collect
@@ -86,7 +86,7 @@ Users may exercise the following rights at any time:
 - Right to **restrict processing**
 - Right to **withdraw** (account deletion)
 
-Requests may be sent to `leeyosep.lee@gmail.com`. We respond within **10 business days**.
+Requests may be sent to `cozy_uploader@naver.com`. We respond within **10 business days**.
 
 Users may revoke YouTube access directly at:
 https://myaccount.google.com/permissions
@@ -112,7 +112,7 @@ Material changes will be notified in the App and on the website in advance. Indi
 
 ## 12. Contact
 
-- Email: **leeyosep.lee@gmail.com**
+- Email: **cozy_uploader@naver.com**
 - Korean PIPC Dispute Mediation: https://www.kopico.go.kr (1833-6972)
 - Korea Internet & Security Agency: https://privacy.kisa.or.kr (118)
 

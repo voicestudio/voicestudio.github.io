@@ -10,7 +10,7 @@ Cozy Uploader(이하 "본 앱")는 사용자의 개인정보를 중요하게 여
 
 - 서비스명: **Cozy Uploader**
 - 개인정보 보호 책임자: 이요셉 (Lee Yoseph)
-- 문의 이메일: **leeyosep.lee@gmail.com**
+- 문의 이메일: **cozy_uploader@naver.com**
 - 공식 홈페이지: https://cozy-uploader.github.io
 
 ## 2. 수집하는 개인정보 항목
@@ -88,7 +88,7 @@ Cozy Uploader(이하 "본 앱")는 사용자의 개인정보를 중요하게 여
 - 개인정보 **처리 정지** 요청
 - 회원 **탈퇴**
 
-요청은 `leeyosep.lee@gmail.com` 으로 가능합니다. 영업일 기준 **10일 이내** 회신 드립니다.
+요청은 `cozy_uploader@naver.com` 으로 가능합니다. 영업일 기준 **10일 이내** 회신 드립니다.
 
 YouTube 연동 해제는 사용자가 직접 다음 위치에서 가능합니다:
 https://myaccount.google.com/permissions
@@ -114,7 +114,7 @@ https://myaccount.google.com/permissions
 
 ## 12. 문의처
 
-- 이메일: **leeyosep.lee@gmail.com**
+- 이메일: **cozy_uploader@naver.com**
 - 개인정보 분쟁 조정: 개인정보분쟁조정위원회 (https://www.kopico.go.kr, 1833-6972)
 - 개인정보 침해신고: 한국인터넷진흥원 (https://privacy.kisa.or.kr, 118)
 

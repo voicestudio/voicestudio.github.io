@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last Updated: 2026-04-15**
+Last Updated: 2026-04-15
 
 Cozy Uploader ("the App") values user privacy and complies with applicable data-protection laws including the EU GDPR and the Korean Personal Information Protection Act (PIPA).
 
@@ -8,9 +8,9 @@ Cozy Uploader ("the App") values user privacy and complies with applicable data-
 
 ## 1. Data Controller
 
-- Service Name: **Cozy Uploader**
+- Service Name: Cozy Uploader
 - Data Protection Officer: Yoseph Lee
-- Contact: **cozy_uploader@naver.com**
+- Contact: cozy_uploader@naver.com
 - Official Website: https://cozy-uploader.github.io
 
 ## 2. Data We Collect
@@ -28,11 +28,11 @@ We only collect the following categories of data. Nothing outside this list is c
 ### 2.2 YouTube Integration (stored locally on user PC)
 | Item | Purpose | Location |
 |------|---------|----------|
-| YouTube OAuth Refresh Token | Uploading videos to the user's own channel | `%APPDATA%\Cozy Uploader\` |
+| YouTube OAuth Refresh Token | Uploading videos to the user's own channel | %APPDATA%\Cozy Uploader\ |
 | Channel ID / Name | Identify target channel, UI display | Local PC |
 | Upload history (title / video ID / timestamp) | Prevent duplicates, usage history | Local PC |
 
-**Important**: YouTube Refresh Tokens and Gemini API keys are **never transmitted to or stored on our servers**. They reside only on the user's PC.
+Important: YouTube Refresh Tokens and Gemini API keys are never transmitted to or stored on our servers. They reside only on the user's PC.
 
 ### 2.3 User-Supplied API Keys (stored locally)
 | Item | Purpose | Location |
@@ -62,8 +62,8 @@ Collected data is used only for the following purposes. Any change of purpose wi
 
 | Category | Retention |
 |----------|-----------|
-| Account info | **2 years** after deactivation/license expiry (for dispute handling) |
-| License issuance records | Per Korean E-Commerce Act: **5 years** |
+| Account info | 2 years after deactivation/license expiry (for dispute handling) |
+| License issuance records | Per Korean E-Commerce Act: 5 years |
 | Local PC data | Until the user deletes it themselves |
 
 ## 6. Third-Party Services
@@ -72,31 +72,31 @@ The App integrates with the following third-party services. Their respective pri
 
 | Service | Purpose | Data Shared | Privacy Policy |
 |---------|---------|-------------|----------------|
-| **Google LLC (YouTube Data API v3)** | Uploading to user's own channel | OAuth credentials, video file and metadata | https://policies.google.com/privacy |
-| **Google LLC (Gemini API)** | AI thumbnail / metadata generation | User-entered prompt text | https://policies.google.com/privacy |
-| **Supabase Inc.** | Authentication, license management | Email, password hash, profile | https://supabase.com/privacy |
-| **Wadiz** | Crowdfunding payment processing | Payment / backer data (App does not receive directly) | https://www.wadiz.kr/web/wcomn/policy/privacy |
+| Google LLC (YouTube Data API v3) | Uploading to user's own channel | OAuth credentials, video file and metadata | https://policies.google.com/privacy |
+| Google LLC (Gemini API) | AI thumbnail / metadata generation | User-entered prompt text | https://policies.google.com/privacy |
+| Supabase Inc. | Authentication, license management | Email, password hash, profile | https://supabase.com/privacy |
+| Wadiz | Crowdfunding payment processing | Payment / backer data (App does not receive directly) | https://www.wadiz.kr/web/wcomn/policy/privacy |
 
 ## 7. Your Rights
 
 Users may exercise the following rights at any time:
 
-- Right to **access** personal data
-- Right to **rectification / erasure**
-- Right to **restrict processing**
-- Right to **withdraw** (account deletion)
+- Right to access personal data
+- Right to rectification / erasure
+- Right to restrict processing
+- Right to withdraw (account deletion)
 
-Requests may be sent to `cozy_uploader@naver.com`. We respond within **10 business days**.
+Requests may be sent to cozy_uploader@naver.com. We respond within 10 business days.
 
 Users may revoke YouTube access directly at:
 https://myaccount.google.com/permissions
 
 ## 8. Security Measures
 
-- Passwords stored using **bcrypt hashing** — plaintext is never stored
-- All Supabase communication over **HTTPS / TLS 1.3**
+- Passwords stored using bcrypt hashing — plaintext is never stored
+- All Supabase communication over HTTPS / TLS 1.3
 - OAuth tokens are stored only on the user's PC and never transmitted to our servers
-- Supabase is hosted in the EU region, meeting **GDPR-level** security standards
+- Supabase is hosted in the EU region, meeting GDPR-level security standards
 
 ## 9. Cookies and Tracking
 
@@ -104,7 +104,7 @@ The App is a desktop application and does not use browser cookies directly. Duri
 
 ## 10. Children's Privacy
 
-The App does not knowingly allow users under **14 years of age** to register. If data from a user under 14 is identified, it is deleted immediately.
+The App does not knowingly allow users under 14 years of age to register. If data from a user under 14 is identified, it is deleted immediately.
 
 ## 11. Changes to This Policy
 
@@ -112,10 +112,10 @@ Material changes will be notified in the App and on the website in advance. Indi
 
 ## 12. Contact
 
-- Email: **cozy_uploader@naver.com**
+- Email: cozy_uploader@naver.com
 - Korean PIPC Dispute Mediation: https://www.kopico.go.kr (1833-6972)
 - Korea Internet & Security Agency: https://privacy.kisa.or.kr (118)
 
 ---
 
-**This Privacy Policy is effective as of 2026-04-15.**
+This Privacy Policy is effective as of 2026-04-15.

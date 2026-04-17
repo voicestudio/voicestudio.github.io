@@ -1,6 +1,6 @@
 # 개인정보 처리방침 (Privacy Policy)
 
-**최종 개정일: 2026-04-15**
+최종 개정일: 2026-04-15
 
 Cozy Uploader(이하 "본 앱")는 사용자의 개인정보를 중요하게 여기며, 「개인정보 보호법」, EU GDPR, 그 밖의 관련 법령을 준수하고자 본 방침을 마련하였습니다.
 
@@ -8,9 +8,9 @@ Cozy Uploader(이하 "본 앱")는 사용자의 개인정보를 중요하게 여
 
 ## 1. 개인정보 처리자 (Controller)
 
-- 서비스명: **Cozy Uploader**
+- 서비스명: Cozy Uploader
 - 개인정보 보호 책임자: 이요셉 (Lee Yoseph)
-- 문의 이메일: **cozy_uploader@naver.com**
+- 문의 이메일: cozy_uploader@naver.com
 - 공식 홈페이지: https://cozy-uploader.github.io
 
 ## 2. 수집하는 개인정보 항목
@@ -28,11 +28,11 @@ Cozy Uploader(이하 "본 앱")는 사용자의 개인정보를 중요하게 여
 ### 2.2 YouTube 연동 정보 (사용자 PC 로컬 저장)
 | 항목 | 용도 | 보관 장소 |
 |------|------|---------|
-| YouTube OAuth Refresh Token | 사용자 본인 채널에 영상 업로드 | 사용자 PC (`%APPDATA%\Cozy Uploader\`) |
+| YouTube OAuth Refresh Token | 사용자 본인 채널에 영상 업로드 | 사용자 PC (%APPDATA%\Cozy Uploader\) |
 | 채널 ID / 채널명 | 업로드 대상 채널 식별 및 UI 표시 | 사용자 PC |
 | 업로드 기록(제목/영상 ID/일시) | 중복 업로드 방지, 이용 히스토리 | 사용자 PC |
 
-**중요**: YouTube Refresh Token, Gemini API 키 등은 **서버에 전송되거나 저장되지 않습니다**. 오직 사용자 본인의 PC에만 저장됩니다.
+중요: YouTube Refresh Token, Gemini API 키 등은 서버에 전송되거나 저장되지 않습니다. 오직 사용자 본인의 PC에만 저장됩니다.
 
 ### 2.3 사용자가 입력한 API 키 (사용자 PC 로컬 저장)
 | 항목 | 용도 | 보관 장소 |
@@ -64,7 +64,7 @@ Cozy Uploader(이하 "본 앱")는 사용자의 개인정보를 중요하게 여
 
 | 구분 | 보유 기간 |
 |------|---------|
-| 회원 계정 정보 | 회원 탈퇴 또는 라이선스 만료 후 **2년** (분쟁 대비) |
+| 회원 계정 정보 | 회원 탈퇴 또는 라이선스 만료 후 2년 (분쟁 대비) |
 | 라이선스 발급 이력 | 관련 법령상 보관 의무 기간 (전자상거래법 5년) |
 | 로컬 PC 데이터 | 사용자가 본인 PC에서 삭제할 때까지 |
 
@@ -74,31 +74,31 @@ Cozy Uploader(이하 "본 앱")는 사용자의 개인정보를 중요하게 여
 
 | 서비스 | 목적 | 제공 정보 | 개인정보 처리방침 |
 |--------|------|---------|-----------------|
-| **Google LLC (YouTube Data API v3)** | 사용자 본인 채널 영상 업로드 | OAuth 인증 정보, 업로드할 영상 파일 및 메타데이터 | https://policies.google.com/privacy |
-| **Google LLC (Gemini API)** | 썸네일 이미지·메타데이터 생성 | 사용자가 입력한 프롬프트 텍스트 | https://policies.google.com/privacy |
-| **Supabase Inc.** | 회원 인증, 라이선스 관리 | 이메일, 비밀번호 해시, 프로필 | https://supabase.com/privacy |
-| **와디즈(Wadiz)** | 크라우드 펀딩 결제 처리 | 결제 및 후원자 정보 (본 앱이 직접 수집하지 않음) | https://www.wadiz.kr/web/wcomn/policy/privacy |
+| Google LLC (YouTube Data API v3) | 사용자 본인 채널 영상 업로드 | OAuth 인증 정보, 업로드할 영상 파일 및 메타데이터 | https://policies.google.com/privacy |
+| Google LLC (Gemini API) | 썸네일 이미지·메타데이터 생성 | 사용자가 입력한 프롬프트 텍스트 | https://policies.google.com/privacy |
+| Supabase Inc. | 회원 인증, 라이선스 관리 | 이메일, 비밀번호 해시, 프로필 | https://supabase.com/privacy |
+| 와디즈(Wadiz) | 크라우드 펀딩 결제 처리 | 결제 및 후원자 정보 (본 앱이 직접 수집하지 않음) | https://www.wadiz.kr/web/wcomn/policy/privacy |
 
 ## 7. 이용자의 권리
 
 이용자는 언제든지 다음 권리를 행사할 수 있습니다.
 
-- 개인정보 **열람** 요청
-- 개인정보 **정정 / 삭제** 요청
-- 개인정보 **처리 정지** 요청
-- 회원 **탈퇴**
+- 개인정보 열람 요청
+- 개인정보 정정 / 삭제 요청
+- 개인정보 처리 정지 요청
+- 회원 탈퇴
 
-요청은 `cozy_uploader@naver.com` 으로 가능합니다. 영업일 기준 **10일 이내** 회신 드립니다.
+요청은 cozy_uploader@naver.com 으로 가능합니다. 영업일 기준 10일 이내 회신 드립니다.
 
 YouTube 연동 해제는 사용자가 직접 다음 위치에서 가능합니다:
 https://myaccount.google.com/permissions
 
 ## 8. 보안 조치
 
-- 비밀번호는 **bcrypt 해시**로 저장되며 평문 비밀번호는 데이터베이스에 저장되지 않습니다
-- Supabase 통신은 **HTTPS/TLS 1.3** 암호화
+- 비밀번호는 bcrypt 해시로 저장되며 평문 비밀번호는 데이터베이스에 저장되지 않습니다
+- Supabase 통신은 HTTPS/TLS 1.3 암호화
 - OAuth 토큰은 사용자 PC 내부에만 저장되며 서버로 전송되지 않음
-- Supabase는 EU 리전에 저장되어 **GDPR** 수준 보안 인프라를 따릅니다
+- Supabase는 EU 리전에 저장되어 GDPR 수준 보안 인프라를 따릅니다
 
 ## 9. 쿠키 및 추적 기술
 
@@ -106,7 +106,7 @@ https://myaccount.google.com/permissions
 
 ## 10. 아동 개인정보
 
-본 앱은 **만 14세 미만 아동**의 회원 가입을 받지 않습니다. 만 14세 미만인 사용자의 정보가 수집된 것으로 확인되면 즉시 삭제합니다.
+본 앱은 만 14세 미만 아동의 회원 가입을 받지 않습니다. 만 14세 미만인 사용자의 정보가 수집된 것으로 확인되면 즉시 삭제합니다.
 
 ## 11. 개인정보 처리방침 변경
 
@@ -114,10 +114,10 @@ https://myaccount.google.com/permissions
 
 ## 12. 문의처
 
-- 이메일: **cozy_uploader@naver.com**
+- 이메일: cozy_uploader@naver.com
 - 개인정보 분쟁 조정: 개인정보분쟁조정위원회 (https://www.kopico.go.kr, 1833-6972)
 - 개인정보 침해신고: 한국인터넷진흥원 (https://privacy.kisa.or.kr, 118)
 
 ---
 
-**본 방침은 2026-04-15부터 시행됩니다.**
+본 방침은 2026-04-15부터 시행됩니다.

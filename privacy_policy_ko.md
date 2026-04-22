@@ -1,6 +1,6 @@
 # 개인정보 처리방침 (Privacy Policy)
 
-최종 개정일: 2026-04-15
+최종 개정일: 2026-04-22
 
 Cozy Uploader(이하 "본 앱")는 사용자의 개인정보를 중요하게 여기며, 「개인정보 보호법」, EU GDPR, 그 밖의 관련 법령을 준수하고자 본 방침을 마련하였습니다.
 
@@ -37,8 +37,27 @@ Cozy Uploader(이하 "본 앱")는 사용자의 개인정보를 중요하게 여
 ### 2.3 사용자가 입력한 API 키 (사용자 PC 로컬 저장)
 | 항목 | 용도 | 보관 장소 |
 |------|------|---------|
-| Gemini API Key (사용자 본인 키) | AI 이미지/텍스트 생성 호출 | 사용자 PC |
+| Gemini API Key (사용자 본인 키) | AI 이미지/텍스트 생성 호출 | 사용자 PC (Windows Credential Manager 암호화) |
+| YouTube client_secrets.json (사용자 본인 키) | YouTube API 인증 | 사용자 PC (Windows Credential Manager 암호화) |
 | FFmpeg 경로, 기타 앱 설정 | 영상 렌더링 | 사용자 PC |
+
+### 2.4 기기 식별자 (라이선스 부정 사용 방지)
+| 항목 | 용도 | 보관 장소 | 비고 |
+|------|------|---------|------|
+| 하드웨어 식별자(hardware_id) | 라이선스당 허용된 PC 대수 확인 | Supabase | 컴퓨터 이름 + MAC 주소의 SHA-256 해시 앞 32자. 원본 복원 불가. PIPA상 "식별 불가능한 정보"로 처리되도록 해시 변환. |
+| 컴퓨터 이름 | 기기 목록 UI 표시 | Supabase | 사용자가 설정에서 확인/삭제 가능 |
+
+### 2.5 텔레메트리 (선택 동의 시에만 수집)
+아래 항목은 설정 탭의 "익명 사용 통계 수집" 체크박스로 **명시 동의**한 경우에만 수집됩니다. 기본값 OFF.
+
+| 항목 | 예시 | 처리 방식 |
+|------|------|---------|
+| 익명 사용자 식별자 | 이메일의 SHA-256 해시 앞 16자 | 원본 이메일 복원 불가능 |
+| 이벤트 이름 | `app_login`, `upload_success`, `render_fail` | 사용 패턴 집계용 |
+| 앱 버전 / 등급 | `1.0.0`, `standard` | 버전별 버그·기능 사용 분석 |
+| 예외 발생 시 스택 트레이스 | Python 예외 메시지 + 코드 줄 번호 | 민감 키·경로는 자동 필터링 후 Sentry 전송 |
+
+**수집 제외 (텔레메트리 동의하더라도)**: 이메일 원본, 비밀번호, API 키, OAuth 토큰, 영상 제목·파일명, 파일 내용.
 
 ## 3. 수집하지 않는 정보
 
@@ -48,7 +67,8 @@ Cozy Uploader(이하 "본 앱")는 사용자의 개인정보를 중요하게 여
 - YouTube 시청자(댓글 작성자 등)의 개인정보
 - 타인의 채널 데이터
 - 위치 정보(GPS/IP 기반 위치)
-- 텔레메트리(telemetry), 사용 분석 데이터 (현재 버전 기준)
+- 영상 파일 내용, 업로드한 영상의 제목·설명·태그 텍스트
+- 텔레메트리 미동의 시: 일체의 사용 이벤트, 오류 로그
 
 ## 4. 처리 목적
 
@@ -77,6 +97,7 @@ Cozy Uploader(이하 "본 앱")는 사용자의 개인정보를 중요하게 여
 | Google LLC (YouTube Data API v3) | 사용자 본인 채널 영상 업로드 | OAuth 인증 정보, 업로드할 영상 파일 및 메타데이터 | https://policies.google.com/privacy |
 | Google LLC (Gemini API) | 썸네일 이미지·메타데이터 생성 | 사용자가 입력한 프롬프트 텍스트 | https://policies.google.com/privacy |
 | Supabase Inc. | 회원 인증, 라이선스 관리 | 이메일, 비밀번호 해시, 프로필 | https://supabase.com/privacy |
+| Functional Software, Inc. (Sentry) | **텔레메트리 동의 시에만**: 예외 스택 트레이스 수집 | 민감정보 필터링 후 스택 트레이스 | https://sentry.io/privacy |
 | 와디즈(Wadiz) | 크라우드 펀딩 결제 처리 | 결제 및 후원자 정보 (본 앱이 직접 수집하지 않음) | https://www.wadiz.kr/web/wcomn/policy/privacy |
 
 ## 7. 이용자의 권리
@@ -120,4 +141,8 @@ https://myaccount.google.com/permissions
 
 ---
 
-본 방침은 2026-04-15부터 시행됩니다.
+본 방침은 2026-04-22부터 시행됩니다.
+
+## 개정 이력
+- 2026-04-22: 텔레메트리(선택 동의) 항목 추가, hardware_id 처리 방식 명시, BYO client_secrets.json 저장 위치(Windows Credential Manager) 명시
+- 2026-04-15: 초판

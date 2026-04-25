@@ -298,73 +298,324 @@
 
 <main class="container">
 
-  <!-- Step 1 -->
+  <h2 style="margin-top: 40px; padding-bottom: 10px; border-bottom: 2px solid var(--accent); color: var(--accent);">▌ 1부. Google Cloud 가입 & 프로젝트 생성</h2>
+
+  <!-- Step 1: 약관 동의 -->
   <div class="step">
     <div class="step-header">
       <div class="step-num">1</div>
-      <h2>Google Cloud Console 접속 &amp; 프로젝트 생성</h2>
+      <h2>Google Cloud 약관 동의</h2>
     </div>
     <div class="step-body">
       <div class="step-text">
         <ol>
-          <li><a href="https://console.cloud.google.com/" target="_blank" rel="noopener">console.cloud.google.com</a> 접속 (본인 Google 계정으로 로그인)</li>
-          <li>첫 접속 시 약관 동의 화면 → 국가 선택, 서비스 약관 체크 후 동의</li>
-          <li>좌측 상단 프로젝트 선택 드롭다운 클릭</li>
-          <li>팝업에서 <strong>"새 프로젝트"</strong> 클릭</li>
-          <li>프로젝트 이름 입력 (예: <code>my-cozy-uploader</code>) → <strong>"만들기"</strong></li>
-          <li>생성 완료 알림 뜨면 상단 드롭다운에서 방금 만든 프로젝트 선택</li>
+          <li><a href="https://console.cloud.google.com/" target="_blank" rel="noopener">console.cloud.google.com</a> 접속</li>
+          <li>본인 Google 계정으로 로그인</li>
+          <li>첫 접속 시 약관 동의 다이얼로그 표시됨</li>
+          <li><strong>국가</strong>: 대한민국 선택</li>
+          <li><strong>서비스 약관</strong> 체크박스 2개 모두 체크</li>
+          <li>오른쪽 하단 <strong>"동의 및 계속하기"</strong> 클릭</li>
         </ol>
         <div class="danger-box">
-          <strong>⛔ 중요: 상단 "무료 체험판" 배너의 "활성화" 버튼은 누르지 마세요.</strong><br>
-          Google Cloud 가입 시 자동으로 제공되는 <strong>₩453,008 / 90일 무료 크레딧</strong> 배너가 뜹니다.
-          <ul style="margin: 10px 0 4px 20px; font-size: 13px;">
-            <li><strong>"활성화"</strong> 누르면 <span style="color: var(--danger); font-weight:600;">신용카드 등록 요구</span> → 크레딧 소진/만료 후 자동 과금 위험</li>
-            <li>YouTube Data API 는 완전히 별도의 <strong>무료 쿼터</strong> (일일 10,000 units) 를 사용하므로 이 크레딧이 <strong>필요 없음</strong></li>
-            <li>오른쪽 <strong>"닫기"</strong> 또는 X 버튼 눌러서 그냥 무시하면 됨</li>
-            <li>무료 체험판이 90일 후 만료돼도 <strong>YouTube API 사용에 아무 영향 없음</strong></li>
-          </ul>
+          <strong>⛔ "무료로 시작하기" 버튼 누르지 마세요.</strong><br>
+          상단의 <strong>$300 무료 크레딧</strong> 배너의 "무료로 시작하기"를 누르면 <span style="color: var(--danger); font-weight:600;">신용카드 등록</span>이 요구됩니다. YouTube Data API 는 별도 무료 쿼터(일일 10,000 units)가 있어 크레딧 불필요. <strong>"닫기"</strong>로 무시하세요.
         </div>
       </div>
       <figure class="step-image">
-        <img src="images/guide/step1-new-project.png" alt="새 프로젝트 만들기 화면"
+        <img src="images/guide/step01-consent.png" alt="약관 동의 화면"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <div class="img-placeholder" style="display:none;">
           <div class="ph-icon">🖼️</div>
-          <div>새 프로젝트 만들기 화면</div>
-          <div class="ph-note">images/guide/step1-new-project.png</div>
+          <div>약관 동의 다이얼로그</div>
+          <div class="ph-note">images/guide/step01-consent.png</div>
         </div>
-        <div class="caption">좌측 상단 드롭다운 → 새 프로젝트</div>
+        <div class="caption">국가 + 약관 체크 → 동의 및 계속하기</div>
       </figure>
     </div>
   </div>
 
-  <!-- Step 2 -->
+  <!-- Step 2: 프로젝트 선택 드롭다운 -->
   <div class="step">
     <div class="step-header">
       <div class="step-num">2</div>
-      <h2>YouTube Data API v3 활성화</h2>
+      <h2>프로젝트 선택 드롭다운 열기</h2>
     </div>
     <div class="step-body">
       <div class="step-text">
         <ol>
-          <li>왼쪽 햄버거 메뉴(☰) → <strong>"API 및 서비스"</strong> → <strong>"라이브러리"</strong></li>
-          <li>검색창에 <code>YouTube Data API v3</code> 입력 후 결과 클릭</li>
-          <li><strong>"사용"</strong> 버튼 클릭 → 활성화 완료</li>
+          <li>약관 동의 후 Google Cloud Console 메인 화면 진입</li>
+          <li>화면 좌측 상단의 <strong>"프로젝트 선택"</strong> 드롭다운 클릭</li>
+          <li>새 창(팝업) 형태로 프로젝트 목록이 열림</li>
         </ol>
-        <a class="link-btn" href="https://console.cloud.google.com/apis/library/youtube.googleapis.com" target="_blank" rel="noopener">직접 이동 링크</a>
       </div>
       <figure class="step-image">
-        <img src="images/guide/step2-enable-api.png" alt="YouTube Data API 활성화"
+        <img src="images/guide/step02-project-dropdown.png" alt="프로젝트 선택 드롭다운"
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <div class="img-placeholder" style="display:none;">
           <div class="ph-icon">🖼️</div>
-          <div>YouTube Data API v3 "사용" 버튼</div>
-          <div class="ph-note">images/guide/step2-enable-api.png</div>
+          <div>프로젝트 선택 드롭다운</div>
+          <div class="ph-note">images/guide/step02-project-dropdown.png</div>
         </div>
-        <div class="caption">"사용" 버튼 클릭으로 API 활성화</div>
+        <div class="caption">상단 좌측 "프로젝트 선택" 클릭</div>
       </figure>
     </div>
   </div>
+
+  <!-- Step 3: 새 프로젝트 다이얼로그 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">3</div>
+      <h2>"새 프로젝트" 버튼 클릭</h2>
+    </div>
+    <div class="step-body">
+      <div class="step-text">
+        <ol>
+          <li>프로젝트 선택 팝업의 <strong>오른쪽 상단</strong> 확인</li>
+          <li><strong>"새 프로젝트"</strong> 버튼 클릭</li>
+          <li>새 프로젝트 만들기 화면으로 이동</li>
+        </ol>
+      </div>
+      <figure class="step-image">
+        <img src="images/guide/step03-new-project-dialog.png" alt="새 프로젝트 다이얼로그"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="img-placeholder" style="display:none;">
+          <div class="ph-icon">🖼️</div>
+          <div>새 프로젝트 버튼</div>
+          <div class="ph-note">images/guide/step03-new-project-dialog.png</div>
+        </div>
+        <div class="caption">팝업 우상단의 "새 프로젝트" 버튼</div>
+      </figure>
+    </div>
+  </div>
+
+  <!-- Step 4: 프로젝트 만들기 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">4</div>
+      <h2>프로젝트 이름 입력 & 만들기</h2>
+    </div>
+    <div class="step-body">
+      <div class="step-text">
+        <ol>
+          <li><strong>프로젝트 이름</strong>: 원하는 이름 입력 (예: <code>my-cozy-uploader</code>)</li>
+          <li>위치(조직)는 그대로 두기 (없음)</li>
+          <li>아래 <strong>"만들기"</strong> 버튼 클릭</li>
+          <li>몇 초 후 "프로젝트 생성됨" 알림이 뜸</li>
+        </ol>
+        <div class="callout">
+          <strong>💡 프로젝트 이름은 본인이 알아볼 수 있는 어떤 이름이든 OK.</strong> 영문/숫자/하이픈만 사용 가능.
+        </div>
+      </div>
+      <figure class="step-image">
+        <img src="images/guide/step04-create-project.png" alt="프로젝트 만들기"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="img-placeholder" style="display:none;">
+          <div class="ph-icon">🖼️</div>
+          <div>프로젝트 이름 입력</div>
+          <div class="ph-note">images/guide/step04-create-project.png</div>
+        </div>
+        <div class="caption">이름 입력 → "만들기"</div>
+      </figure>
+    </div>
+  </div>
+
+  <!-- Step 5: 만들어진 프로젝트 선택 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">5</div>
+      <h2>방금 만든 프로젝트 선택</h2>
+    </div>
+    <div class="step-body">
+      <div class="step-text">
+        <ol>
+          <li>다시 좌측 상단 <strong>"프로젝트 선택"</strong> 드롭다운 클릭</li>
+          <li>방금 만든 프로젝트 이름 클릭</li>
+          <li>화면 상단의 프로젝트 이름이 변경됨 확인</li>
+        </ol>
+        <div class="warn-box">
+          ⚠️ 이 단계를 빼먹으면 다음 작업이 다른 프로젝트에 적용됩니다. 반드시 방금 만든 프로젝트가 선택돼야 합니다.
+        </div>
+      </div>
+      <figure class="step-image">
+        <img src="images/guide/step05-select-project.png" alt="프로젝트 선택"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="img-placeholder" style="display:none;">
+          <div class="ph-icon">🖼️</div>
+          <div>방금 만든 프로젝트 선택</div>
+          <div class="ph-note">images/guide/step05-select-project.png</div>
+        </div>
+        <div class="caption">상단 드롭다운에서 방금 만든 프로젝트 클릭</div>
+      </figure>
+    </div>
+  </div>
+
+  <h2 style="margin-top: 40px; padding-bottom: 10px; border-bottom: 2px solid var(--accent); color: var(--accent);">▌ 2부. YouTube Data API v3 활성화</h2>
+
+  <!-- Step 6: 햄버거 메뉴 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">6</div>
+      <h2>좌측 햄버거 메뉴 펼치기</h2>
+    </div>
+    <div class="step-body">
+      <div class="step-text">
+        <ol>
+          <li>화면 좌측 상단의 <strong>햄버거 메뉴(☰)</strong> 아이콘 클릭</li>
+          <li>좌측 사이드바 메뉴 펼침 표시</li>
+        </ol>
+      </div>
+      <figure class="step-image">
+        <img src="images/guide/step06-hamburger.png" alt="햄버거 메뉴"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="img-placeholder" style="display:none;">
+          <div class="ph-icon">🖼️</div>
+          <div>햄버거 메뉴 클릭</div>
+          <div class="ph-note">images/guide/step06-hamburger.png</div>
+        </div>
+        <div class="caption">좌측 상단 ☰ 클릭</div>
+      </figure>
+    </div>
+  </div>
+
+  <!-- Step 7: API 라이브러리 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">7</div>
+      <h2>"API 및 서비스" → "라이브러리"</h2>
+    </div>
+    <div class="step-body">
+      <div class="step-text">
+        <ol>
+          <li>펼쳐진 메뉴에서 <strong>"API 및 서비스"</strong> 항목 찾기</li>
+          <li>하위 메뉴에서 <strong>"라이브러리"</strong> 클릭</li>
+          <li>API 라이브러리 화면으로 이동</li>
+        </ol>
+        <a class="link-btn" href="https://console.cloud.google.com/apis/library" target="_blank" rel="noopener">바로가기 링크</a>
+      </div>
+      <figure class="step-image">
+        <img src="images/guide/step07-library.png" alt="API 라이브러리"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="img-placeholder" style="display:none;">
+          <div class="ph-icon">🖼️</div>
+          <div>API 라이브러리 클릭</div>
+          <div class="ph-note">images/guide/step07-library.png</div>
+        </div>
+        <div class="caption">API 및 서비스 → 라이브러리</div>
+      </figure>
+    </div>
+  </div>
+
+  <!-- Step 8: YouTube 검색 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">8</div>
+      <h2>"YouTube Data API v3" 검색</h2>
+    </div>
+    <div class="step-body">
+      <div class="step-text">
+        <ol>
+          <li>API 라이브러리 화면 상단 검색창 찾기</li>
+          <li>검색창에 <code>YouTube Data API v3</code> 입력</li>
+          <li>아래에 검색 결과로 <strong>YouTube Data API v3</strong> 카드가 표시됨</li>
+        </ol>
+      </div>
+      <figure class="step-image">
+        <img src="images/guide/step08-search.png" alt="YouTube API 검색"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="img-placeholder" style="display:none;">
+          <div class="ph-icon">🖼️</div>
+          <div>YouTube Data API v3 검색</div>
+          <div class="ph-note">images/guide/step08-search.png</div>
+        </div>
+        <div class="caption">검색창에 "YouTube Data API v3" 입력</div>
+      </figure>
+    </div>
+  </div>
+
+  <!-- Step 9: API 카드 클릭 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">9</div>
+      <h2>"YouTube Data API v3" 카드 클릭</h2>
+    </div>
+    <div class="step-body">
+      <div class="step-text">
+        <ol>
+          <li>검색 결과에서 빨간 YouTube 아이콘이 있는 <strong>"YouTube Data API v3"</strong> 카드 클릭</li>
+          <li>API 상세 정보 화면으로 이동</li>
+        </ol>
+      </div>
+      <figure class="step-image">
+        <img src="images/guide/step09-click-api.png" alt="API 카드 클릭"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="img-placeholder" style="display:none;">
+          <div class="ph-icon">🖼️</div>
+          <div>YouTube Data API v3 카드</div>
+          <div class="ph-note">images/guide/step09-click-api.png</div>
+        </div>
+        <div class="caption">YouTube Data API v3 카드 클릭</div>
+      </figure>
+    </div>
+  </div>
+
+  <!-- Step 10: 사용 (활성화) -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">10</div>
+      <h2>"사용" 버튼 클릭 (활성화)</h2>
+    </div>
+    <div class="step-body">
+      <div class="step-text">
+        <ol>
+          <li>API 상세 화면에서 파란 <strong>"사용"</strong> 버튼 클릭</li>
+          <li>활성화 처리 (몇 초 ~ 수십 초 소요)</li>
+          <li>처리 완료 후 자동으로 API 관리 화면으로 이동</li>
+        </ol>
+      </div>
+      <figure class="step-image">
+        <img src="images/guide/step10-enable.png" alt="사용 버튼"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="img-placeholder" style="display:none;">
+          <div class="ph-icon">🖼️</div>
+          <div>사용 버튼 클릭</div>
+          <div class="ph-note">images/guide/step10-enable.png</div>
+        </div>
+        <div class="caption">파란 "사용" 버튼으로 API 활성화</div>
+      </figure>
+    </div>
+  </div>
+
+  <!-- Step 11: 활성화 성공 확인 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">11</div>
+      <h2>YouTube Data API v3 활성화 완료 확인</h2>
+    </div>
+    <div class="step-body">
+      <div class="step-text">
+        <ol>
+          <li>API/서비스 세부정보 화면 진입</li>
+          <li>화면 우측 <strong>"상태"</strong> 항목이 <strong>"사용 설정됨"</strong> 인지 확인</li>
+          <li>좌측 메뉴에 <strong>"사용 설정된 API 및 서비스"</strong>, <strong>"OAuth 동의 화면"</strong>, <strong>"사용자 인증 정보"</strong> 등이 표시됨</li>
+        </ol>
+        <div class="callout">
+          <strong>✅ 1부 완료!</strong> 여기까지 했다면 YouTube API 사용 준비 끝. 이제 OAuth 동의 화면을 설정합니다.
+        </div>
+      </div>
+      <figure class="step-image">
+        <img src="images/guide/step11-v3-success.png" alt="활성화 성공"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="img-placeholder" style="display:none;">
+          <div class="ph-icon">🖼️</div>
+          <div>v3 활성화 성공</div>
+          <div class="ph-note">images/guide/step11-v3-success.png</div>
+        </div>
+        <div class="caption">"상태: 사용 설정됨" 확인</div>
+      </figure>
+    </div>
+  </div>
+
+  <h2 style="margin-top: 40px; padding-bottom: 10px; border-bottom: 2px solid var(--accent); color: var(--accent);">▌ 3부. OAuth 동의 화면 설정 (Google 인증 플랫폼)</h2>
 
   <!-- Step 3 -->
   <div class="step">

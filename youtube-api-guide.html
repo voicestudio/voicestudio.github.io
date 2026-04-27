@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>YouTube API 등록 가이드 - Cozy Uploader</title>
-<meta name="description" content="Cozy Uploader에서 사용할 본인의 YouTube Data API client_secrets.json 파일을 Google Cloud Console에서 생성하는 단계별 가이드. 2026 최신 UI + 스크린샷.">
+<meta name="description" content="Cozy Uploader 에 본인 YouTube 채널을 연결하기 위한 단계별 가이드 (스크린샷 27장).">
 <meta property="og:title" content="YouTube API 등록 가이드 - Cozy Uploader">
-<meta property="og:description" content="Google Cloud 프로젝트 생성부터 client_secrets.json 등록까지 단계별 가이드 (스크린샷 포함)">
+<meta property="og:description" content="본인 YouTube 채널 연결 7~10분 가이드 (스크린샷 27장)">
 <meta property="og:type" content="article">
 <style>
   :root {
@@ -372,18 +372,10 @@
 <header>
   <div class="container">
     <div class="badge">YouTube API 등록 가이드</div>
-    <h1>본인 Google Cloud 프로젝트 연결하기</h1>
-    <p>YouTube 업로드 쿼터(일일 10,000 units)를 본인 계정에 귀속시키기 위해 Google Cloud에서 client_secrets.json을 만들어 앱에 등록합니다. 약 7~10분 소요.</p>
-    <div class="ui-note">⚙️ 2026년 최신 UI (Google 인증 플랫폼) 기준 · 화면 이미지 포함</div>
+    <h1>본인 YouTube 채널 연결하기</h1>
+    <p>아래 단계를 따라하면 약 7~10분 안에 끝납니다. 신용카드 등록 안 해도 됩니다.</p>
   </div>
 </header>
-
-<div class="notice">
-  <strong>왜 이 작업이 필요한가요?</strong><br>
-  YouTube API 쿼터는 OAuth 클라이언트가 속한 Google Cloud 프로젝트 단위로 부과됩니다.
-  모든 사용자가 하나의 프로젝트를 공유하면 쿼터가 금방 소진되기 때문에,
-  각자 본인의 프로젝트를 만들어 연결해야 안정적으로 업로드할 수 있습니다.
-</div>
 
 <main class="container">
 
@@ -406,8 +398,8 @@
           <li>오른쪽 하단 <strong>"동의 및 계속하기"</strong> 클릭</li>
         </ol>
         <div class="danger-box">
-          <strong>⛔ "무료로 시작하기" 버튼 누르지 마세요.</strong><br>
-          상단의 <strong>$300 무료 크레딧</strong> 배너의 "무료로 시작하기"를 누르면 <span style="color: var(--danger); font-weight:600;">신용카드 등록</span>이 요구됩니다. YouTube Data API 는 별도 무료 쿼터(일일 10,000 units)가 있어 크레딧 불필요. <strong>"닫기"</strong>로 무시하세요.
+          <strong>⛔ 상단 "무료로 시작하기" 배너 누르지 마세요.</strong><br>
+          누르면 <strong>신용카드 등록</strong>이 요구됩니다. 그냥 "닫기" 또는 "X" 로 무시하면 됩니다.
         </div>
       </div>
       <figure class="step-image">
@@ -685,10 +677,10 @@
         <ol>
           <li>API/서비스 세부정보 화면 진입</li>
           <li>화면 우측 <strong>"상태"</strong> 항목이 <strong>"사용 설정됨"</strong> 인지 확인</li>
-          <li>좌측 메뉴에 <strong>"사용 설정된 API 및 서비스"</strong>, <strong>"OAuth 동의 화면"</strong>, <strong>"사용자 인증 정보"</strong> 등이 표시됨</li>
+          <li>좌측 메뉴에 새 항목들이 표시됨</li>
         </ol>
         <div class="callout">
-          <strong>✅ 1부 완료!</strong> 여기까지 했다면 YouTube API 사용 준비 끝. 이제 OAuth 동의 화면을 설정합니다.
+          <strong>✅ 절반 완료!</strong> 이제 본인 인증 설정으로 넘어갑니다.
         </div>
       </div>
       <figure class="step-image">
@@ -704,11 +696,7 @@
     </div>
   </div>
 
-  <h2 style="margin-top: 40px; padding-bottom: 10px; border-bottom: 2px solid var(--accent); color: var(--accent);">▌ 3부. OAuth 동의 화면 설정 (Google 인증 플랫폼)</h2>
-
-  <p style="color: var(--text-muted); font-size: 13px; margin: 12px 0 24px;">
-    2026년부터 Google 이 OAuth 동의 화면 UI를 <strong>"Google 인증 플랫폼"</strong>으로 개편했습니다. 왼쪽 메뉴가 <span class="menu-tag">개요</span> <span class="menu-tag">브랜딩</span> <span class="menu-tag">대상</span> <span class="menu-tag">클라이언트</span> 형태입니다. 아래 16단계를 차례대로 진행하세요.
-  </p>
+  <h2 style="margin-top: 40px; padding-bottom: 10px; border-bottom: 2px solid var(--accent); color: var(--accent);">▌ 3부. 본인 인증 설정</h2>
 
   <!-- Step 12 -->
   <div class="step">
@@ -771,27 +759,15 @@
     </div>
     <div class="step-body">
       <div class="step-text">
-        <h3>14-1. 앱 정보 (1/4)</h3>
-        <ul>
-          <li><strong>앱 이름</strong>: <code>My Cozy Uploader</code> (또는 원하는 이름)
-            <ul><li>⚠️ "Google" / "YouTube" 같은 브랜드명 사용 금지</li></ul>
+        <ol>
+          <li><strong>앱 이름</strong>: <code>My Cozy Uploader</code> 입력
+            <ul><li>⚠️ "Google" / "YouTube" 같은 단어 사용 금지</li></ul>
           </li>
-          <li><strong>사용자 지원 이메일</strong>: 드롭다운에서 본인 Google 이메일 선택</li>
-        </ul>
-        <h3>14-2. 대상 (2/4)</h3>
-        <ul>
-          <li><strong>외부(External)</strong> 선택</li>
-          <li>Internal 은 Google Workspace 전용</li>
-        </ul>
-        <h3>14-3. 연락처 정보 (3/4)</h3>
-        <ul>
-          <li><strong>이메일 주소</strong>: 본인 Google 이메일 입력</li>
-        </ul>
-        <h3>14-4. 약관 동의 (4/4)</h3>
-        <ul>
-          <li><strong>"Google API 서비스: 사용자 데이터 정책"</strong> 체크</li>
-          <li><strong>"만들기"</strong> 클릭</li>
-        </ul>
+          <li><strong>사용자 지원 이메일</strong>: 본인 이메일 선택</li>
+          <li><strong>대상</strong>: <strong>"외부(External)"</strong> 선택</li>
+          <li><strong>연락처 이메일</strong>: 본인 이메일 입력</li>
+          <li>약관 체크 → <strong>"만들기"</strong> 클릭</li>
+        </ol>
       </div>
       <figure class="step-image">
         <img src="images/guide/step14-project-config.jpg" alt="앱 정보 마법사"
@@ -1179,88 +1155,23 @@
     <div class="faq-item">
       <div class="faq-q">Q. 유료인가요?</div>
       <div class="faq-a">
-        Google Cloud 자체는 무료로 시작. YouTube Data API 는 일일 10,000 units 무료 쿼터 제공.
-        영상 1개 업로드당 약 1,700 units 이므로 하루 5~6개까지 무료 업로드 가능.
-        처음 가입 시 제공되는 ₩450,000 무료 크레딧은 YouTube API 호출에 사용되지 않습니다.
+        무료입니다. 신용카드 등록 안 해도 개인 채널 운영에 충분합니다.
       </div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">Q. 상단에 뜨는 "무료 체험판 ₩453,008 크레딧" 은 뭔가요? 활성화해야 하나요?</div>
+      <div class="faq-q">Q. 여러 YouTube 채널도 가능한가요?</div>
       <div class="faq-a">
-        <strong>활성화하지 마세요.</strong> 이 크레딧은 Google Cloud 의 유료 서비스(Compute Engine, BigQuery 등)를 체험해보라고 주는 <strong>별개의</strong> 무료 크레딧입니다.
-        YouTube Data API 는 이 크레딧을 <em>전혀 사용하지 않고</em>, 고유한 일일 10,000 units 무료 쿼터로만 동작합니다.
-        "활성화" 를 누르면 <strong>신용카드 등록을 요구</strong>하고, 크레딧 만료 후에는 자동 과금되는 "유료 계정" 으로 전환되기 때문에 의도치 않은 비용이 발생할 수 있습니다.
-        배너 오른쪽 <strong>"닫기"</strong> 또는 <strong>"X"</strong> 로 닫고 무시하세요. 90일 뒤 크레딧이 만료되어도 Cozy Uploader 사용에 전혀 문제없습니다.
+        가능합니다. 다른 채널의 Google 이메일도 15단계 "테스트 사용자" 에 추가하면 됩니다.
       </div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">Q. 그럼 신용카드 등록은 언제 필요한가요?</div>
+      <div class="faq-q">Q. 화면이 영어로만 나와요.</div>
       <div class="faq-a">
-        <strong>Cozy Uploader 기본 사용에는 신용카드 등록이 필요 없습니다.</strong>
-        다음 경우에만 결제 계정(신용카드) 등록이 필요합니다:
-        <ul style="margin-top: 6px; margin-left: 18px;">
-          <li>일일 10,000 units 무료 쿼터를 초과하는 고급 사용 (Professional 등급 등)</li>
-          <li>YouTube Data API 이외의 유료 Google Cloud 서비스 사용</li>
-        </ul>
-        일반적인 개인 채널 운영에서는 영원히 무료 쿼터 안에서 사용 가능합니다.
+        Google Cloud Console 우측 상단 프로필 → 설정 → 언어에서 "한국어" 로 변경 가능합니다. 영어 그대로 진행해도 단계는 동일합니다.
       </div>
     </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Q. 하루 10개 이상 업로드하고 싶어요.</div>
-      <div class="faq-a">
-        Google Cloud Console → "API 및 서비스 &gt; 할당량" 에서 확장 신청 가능.
-        Professional 등급 (채널 6개 × 6영상 = 36개/일) 사용하려면 확장 필요. 심사 1~2개월.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Q. 왼쪽 메뉴가 예전 가이드 화면과 달라요.</div>
-      <div class="faq-a">
-        2026년 Google 이 OAuth UI를 "Google Auth Platform" 으로 개편.
-        왼쪽 메뉴가 <span class="menu-tag">개요</span> <span class="menu-tag">브랜딩</span> <span class="menu-tag">대상</span> <span class="menu-tag">클라이언트</span> 형태면 신버전.
-        "사용자 인증 정보" · "OAuth 동의 화면" 형태면 구버전. 이 가이드는 신버전 기준.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Q. 본인 확인 없이 사용하고 싶어요.</div>
-      <div class="faq-a">
-        <span class="menu-tag">대상</span> 탭을 "테스트 중" 상태로 유지하고 본인을 테스트 사용자로 추가하면 됨.
-        "앱 게시" 누를 때만 Google 심사 필요.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Q. 여러 YouTube 채널 관리 가능?</div>
-      <div class="faq-a">
-        네. client_secrets.json 하나로 여러 채널 연결 가능.
-        다른 Google 계정 채널은 해당 이메일도 <span class="menu-tag">대상</span> 탭 테스트 사용자에 추가.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Q. 파일 해킹되면?</div>
-      <div class="faq-a">
-        <span class="menu-tag">클라이언트</span> 탭에서 해당 클라이언트 삭제 후 새로 생성 → 즉시 무효화.
-        Cozy Uploader 는 이 파일을 Windows Credential Manager 로 암호화 저장.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">Q. 영어로만 나와요.</div>
-      <div class="faq-a">
-        Google Cloud Console 우측 상단 프로필 → 설정 → 언어에서 "한국어" 로 변경.
-        영어 그대로 진행해도 동일.
-      </div>
-    </div>
-  </div>
-
-  <div class="callout" style="margin: 40px auto; max-width: 900px;">
-    <strong>🎉 등록 완료 시</strong>, Cozy Uploader 로 돌아가서 수동 업로드 / 완전자동화 사용 가능.
-    쿼터 부족 시 <strong>"API 및 서비스 &gt; 할당량"</strong> 에서 사용량 확인.
   </div>
 
 </main>
